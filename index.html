@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>  
+<head>
     <title>Akhil Balakrishnan</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,6 +34,91 @@
 </head>
 
 <body>
+    <!----Banner---->
+    <div id="home" class="banner">
+        <!----Header---->
+        <header>
+            <div class="logo">
+                <h1><a href="index.html">My Info <span>WHO I AM</span></a></h1>
+            </div>
+            <!----Navigation Menu---->
+            <div class="menu">
+                <div class="mobile-nav-button">
+                    <div class="mobile-nav-button__line"></div>
+                    <div class="mobile-nav-button__line"></div>
+                    <div class="mobile-nav-button__line"></div>
+                </div>
+                <nav class="mobile-menu">
+                    <ul>
+                        <li><a href="#home" class="active scroll">Home</a></li>
+                        <li><a href="#about" class="scroll">About</a></li>
+                        <li><a href="#skills" class="scroll">Skills</a></li>
+                        <!-- <li><a href="#services" class="scroll">Services</a></li> -->
+                        <li><a href="#contact" class="scroll">Contact</a></li>
+                    </ul>
+                    <div class="clearfix"> </div>
+                </nav>
+            </div>
+            <!----//Navigatiion Menu---->
+            <div class="clearfix"> </div>
+        </header>
+        <!----//Header---->
+
+        <!----Banner_Info---->
+        <div class="banner_info">
+            <h2><span>HI! I'm</span> Akhil Balakrishnan</h2>
+            <div id="typed-strings" class="strings">
+                <p>LEAD <i>DEVELOPER.</i></p>
+                <p>LEAD <i>UI/UX DESIGNER.</i></p>
+                <p>LEAD <i>WEB DEVELOPER.</i></p>
+            </div>
+            <SPan id="typed" style="white-space: pre;"> </SPan>
+            <p class="banner-p">“Take a risk and keep testing, because what works today won’t work tomorrow,but what
+                worked yesterday may work again.” <br> – Amrita Sahasrabudhe</p>
+        </div>
+        <!----//Banner_Info---->
+    </div>
+    <!----//Banner---->
+
+    <!----Navigation Menu---->
+    <script>
+        $(document).ready(function () {
+            $('.mobile-nav-button').on('click', function () {
+                $(".mobile-nav-button .mobile-nav-button__line:nth-of-type(1)").toggleClass("mobile-nav-button__line--1");
+                $(".mobile-nav-button .mobile-nav-button__line:nth-of-type(2)").toggleClass("mobile-nav-button__line--2");
+                $(".mobile-nav-button .mobile-nav-button__line:nth-of-type(3)").toggleClass("mobile-nav-button__line--3");
+
+                $('.mobile-menu').toggleClass('mobile-menu--open');
+                return false;
+            });
+        });
+    </script>
+    <!----//Navigation Menu---->
+
+    <!----Banner_Info Typing---->
+    <script src="js/typed.js" type="text/javascript"></script>
+    <script>
+        $(function () {
+            $("#typed").typed({
+                // strings: ["Typed.js is a <strong>jQuery</strong> plugin.", "It <em>types</em> out sentences.", "And then deletes them.", "Try it out!"],
+                stringsElement: $('#typed-strings'),
+                typeSpeed: 30,
+                backDelay: 500,
+                loop: false,
+                contentType: 'html',// or text
+                // defaults to false for infinite loop
+                loopCount: false,
+                callback: function () { foo(); },
+                resetCallback: function () { newTyped(); }
+            });
+
+            $(".reset").click(function () {
+                $("#typed").typed('reset');
+            });
+
+        });
+    </script>
+    <!----//Banner_Info Typing---->
 
 </body>
 
