@@ -317,3 +317,61 @@ p .banner-p{
     padding: 1em 0em .2em 0em;
 }
 /*------ //About ------*/
+
+/*------ Progressive-Effects ------*/
+.progressive-effects {
+	background: url("../images/progress.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+    padding: 3em 0em 2em 0em;
+    min-height: 100vh;
+}
+#skills h3 {
+	text-align: center;
+	margin-bottom: 30px;
+	font-size: 40px;
+	color: #FFF;
+}
+
+	/*------ Progress-Bar ------*/
+
+	#about-us .lead {
+		font-family: 'Montserrat', sans-serif;
+		font-size: 16px;
+		margin-bottom: 5px;
+		text-align: left;
+		color: #FFF;
+	}
+
+	.progress{
+		height: 20px;
+		background-color: #fff;
+		border-radius: 0;
+		box-shadow: none;
+		-webkit-box-shadow: none;
+		margin-bottom: 25px;
+	}
+
+	.progress-bar{
+		box-shadow: none;
+		-webkit-box-shadow: none;
+		text-align: right;
+		padding-right: 12px;
+		background-color: #0086f6;
+		font-size: 12px;
+		font-weight: 600;
+	}
+
+	.progress .progress-bar.six-sec-ease-in-out {
+		-webkit-transition: width 2s ease-in-out;
+		transition: width 2s ease-in-out;
+	}
+
+	/*------ //Progress-Bar ------*/
+
+/*------ Progressive-Effects ------*/
