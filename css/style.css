@@ -283,3 +283,37 @@ p .banner-p{
     font-size: 2.5em;
 }
 /*------ //Banner_Info ------*/
+
+/*------ About ------*/
+#about{
+    min-height: 100vh;
+    padding: 3em 0em 2em 0em;
+    background: rgba(0, 0, 0, 0.795); 
+}
+.col-lg-8 h2{
+    margin-top: .5em;
+    color: #fff;
+    font-size: 40px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.text{
+    color: rgb(196, 196, 196);
+    text-align: justify;
+    font-family: 'Josefins Sans', sans-serif;
+    padding: 2em 0 2em 0;
+    font-weight: 400;
+}
+.text span{
+    font-size: 25px;
+    font-weight: 500;
+}
+.tools{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: rgb(194, 194, 194);
+}
+.tools li{
+    padding: 1em 0em .2em 0em;
+}
+/*------ //About ------*/
