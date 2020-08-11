@@ -530,9 +530,15 @@ button.btn-contact{
   border-radius: 0.25rem;
 }
 .cont-details h6 a {
-  color: #051b35;
+  color: #fafbfd;
 }
 /*------ //Contact ------*/
+
+/*------ Copyright ------*/
+.copyright{
+    color: #fff;
+    font-size: 13px;          
+}
 
 /*------ Responsive ------*/
 @media(max-width:1660px){

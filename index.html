@@ -17,6 +17,7 @@
     <!----Google Fonts---->
     <link href="//fonts.googleapis.com/css?family=Josefin+Sans:100,300,400,600,700" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script
         type="application/x-javascript"> addEventListener("load", function(){ setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0, 1); }</script>
     <!----Smooth Scrolling---->
@@ -151,7 +152,7 @@
     </div>
     <!----//Progressive-Effects---->
 
-    <!----Contact---->
+    <!----Footer---->
     <section class="contact-1" id="contact">
         <div class="contacts-9 section-gap">
             <div class="wrapper">
@@ -189,18 +190,18 @@
                     </div>
                     <!----Cont-Details---->
                     <div class="map-content-9">
-                        <form action="" method="POST">
+                        <form id="submit-form" action="">
                             <div class="twice-two">
-                                <input type="text" class="form-control" name="w3lName" id="w3lName" placeholder="Name"
+                                <input type="text"  name="Name" id="Name" placeholder="Name"
                                     required="">
-                                <input type="email" class="form-control" name="w3lSender" id="welSender"
+                                <input type="email" name="Sender" id="Sender"
                                     placeholder="Email" required="">
                             </div>
                             <div class="twice">
-                                <input type="text" class="form-control" name="w3lSubject" id="w3lSubject"
+                                <input type="text"  name="Subject" id="Subject"
                                     placeholder="Subject" required="">
                             </div>
-                            <textarea name="w3lMessage" class="form-control" id="w3lMessage" placeholder="Message"
+                            <textarea name="Message"  id="Message" placeholder="Message"
                                 required=""></textarea>
                             <button type="submit" class="btn btn-contact">Send Message</button>
                         </form>
@@ -210,8 +211,11 @@
             </div>
         </div>
         <!----Contacts---->
+    <div class="copyright text-center">
+        <p> &copy; Copyright 2020 All Rights Reserved | Designed By AB</p>
+    </div>
     </section>
-    <!----//Contact---->
+    <!----//Footer---->
 
     <!----Navigation Menu---->
     <script>
@@ -260,6 +264,28 @@
     <script type="text/javascript" src="js/mousescroll.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <!----//Progressive-Effects-Animation-JavaScript---->
+
+    <!----Email Submission---->
+    <script>
+        $("#submit-form").submit((e)=>{
+            e.preventDefault()
+            $.ajax({
+                url:"https://script.google.com/macros/s/AKfycbxFIe10JpPw143QChFsGsDTVMmN7P1RKEq-7uBDxQ/exec",
+                data:$("#submit-form").serialize(),
+                method:"post",
+                success:function (response){
+                    alert("Form submitted successfully")
+                    window.location.reload()
+                    // window.location.href=""
+                },
+                error:function (err){
+                    alert("Something Error")
+    
+                }
+            })
+        })
+    </script>
+    <!----//Email Submission---->
 
 </body>
 
